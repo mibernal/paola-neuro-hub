@@ -1,0 +1,86 @@
+mutation CreateSeedData @transaction @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  psychologist_insertMany(data: [
+    {
+      name: "Dr. Jane Doe",
+      email: "jane.doe@example.com",
+      professionalLicenseNumber: "12345",
+      bio: "Experienced psychologist specializing in cognitive behavioral therapy.",
+      address: "123 Main St, Anytown",
+      phoneNumber: "555-123-4567",
+      profilePictureUrl: "https://example.com/jane_doe.jpg"
+    },
+    {
+      name: "Dr. John Smith",
+      email: "john.smith@example.com",
+      professionalLicenseNumber: "67890",
+      bio: "Dedicated psychologist with a focus on family and marriage counseling.",
+      address: "456 Oak Ave, Anytown",
+      phoneNumber: "555-987-6543",
+      profilePictureUrl: "https://example.com/john_smith.jpg"
+    }
+  ])
+  service_insertMany(data: [
+    {
+      name: "Individual Therapy",
+      description: "One-on-one therapy session with a licensed psychologist.",
+      duration: "60 minutes",
+      price: 120.00,
+      imageUrl: "https://example.com/individual_therapy.jpg"
+    },
+    {
+      name: "Couples Counseling",
+      description: "Therapy session for couples to improve communication and resolve conflicts.",
+      duration: "90 minutes",
+      price: 180.00,
+      imageUrl: "https://example.com/couples_counseling.jpg"
+    }
+  ])
+  blogPost_insertMany(data: [
+    {
+      title: "The Benefits of Mindfulness",
+      content: "Mindfulness can help reduce stress and improve overall well-being.",
+      publishDate: "2024-01-26T12:00:00Z",
+      imageUrl: "https://example.com/mindfulness.jpg",
+      tags: ["mindfulness", "stress reduction"]
+    },
+    {
+      title: "Tips for a Healthy Relationship",
+      content: "Communication and empathy are key to a successful relationship.",
+      publishDate: "2024-01-27T10:00:00Z",
+      imageUrl: "https://example.com/healthy_relationship.jpg",
+      tags: ["relationship", "communication"]
+    }
+  ])
+  testimonial_insertMany(data: [
+    {
+      clientName: "Alice Johnson",
+      date: "2024-01-25",
+      rating: 5,
+      reviewText: "Dr. Doe helped me overcome my anxiety and improve my quality of life."
+    },
+    {
+      clientName: "Bob Williams",
+      date: "2024-01-26",
+      rating: 4,
+      reviewText: "Couples counseling with Dr. Smith saved our marriage. We are now closer than ever."
+    }
+  ])
+  appointment_insertMany(data: [
+    {
+      clientName: "Charlie Brown",
+      clientEmail: "charlie.brown@example.com",
+      clientPhoneNumber: "555-111-2222",
+      desiredDateTime: "2024-02-01T14:00:00Z",
+      notes: "Requesting a consultation for individual therapy.",
+      status: "pending",
+    },
+    {
+      clientName: "Diana Davis",
+      clientEmail: "diana.davis@example.com",
+      clientPhoneNumber: "555-333-4444",
+      desiredDateTime: "2024-02-03T16:00:00Z",
+      notes: "Seeking couples counseling with my partner.",
+      status: "confirmed",
+    }
+  ])
+}

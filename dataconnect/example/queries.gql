@@ -1,0 +1,58 @@
+﻿# dataconnect/example/queries.gql
+# Consultas (listas) compatibles con dataconnect/schema/schema.gql
+
+query ListServices {
+  services {
+    name
+    description
+    price
+    duration
+    imageUrl
+  }
+}
+
+query ListPsychologists {
+  psychologists {
+    name
+    professionalLicenseNumber
+    email
+    bio
+    profilePictureUrl
+    phoneNumber
+    address
+  }
+}
+
+query ListTestimonials {
+  testimonials {
+    clientName
+    reviewText
+    date
+    rating
+  }
+}
+
+query ListBlogPosts {
+  blogPosts {
+    title
+    content
+    publishDate
+    imageUrl
+    tags
+  }
+}
+
+query ListAppointments {
+  appointments {
+    clientName
+    clientEmail
+    desiredDateTime
+    status
+    clientPhoneNumber
+    notes
+    serviceRequested {
+      name
+      description
+    }
+  }
+}

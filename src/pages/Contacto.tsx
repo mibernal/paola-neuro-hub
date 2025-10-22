@@ -56,8 +56,8 @@ const Contacto = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'contacto@paolahenao.com',
-      link: 'mailto:contacto@paolahenao.com',
+      content: 'jessi.henao4@gmail.com',
+      link: 'mailto:jessi.henao4@gmail.com',
     },
     {
       icon: Phone,

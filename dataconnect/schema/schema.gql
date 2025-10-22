@@ -1,0 +1,42 @@
+type Psychologist @table {
+  name: String!
+  professionalLicenseNumber: String!
+  email: String!
+  bio: String
+  profilePictureUrl: String
+  phoneNumber: String
+  address: String
+}
+
+type Service @table {
+  name: String!
+  description: String!
+  price: Float
+  duration: String
+  imageUrl: String
+}
+
+type Testimonial @table {
+  clientName: String!
+  reviewText: String!
+  date: Date!
+  rating: Int
+}
+
+type BlogPost @table {
+  title: String!
+  content: String!
+  publishDate: Timestamp!
+  imageUrl: String
+  tags: [String]
+}
+
+type Appointment @table {
+  clientName: String!
+  clientEmail: String!
+  desiredDateTime: Timestamp!
+  status: String!
+  clientPhoneNumber: String
+  notes: String
+  serviceRequested: Service
+}

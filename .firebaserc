@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "paola-henao-neuro-psicologa",
+    "paola-henao": "contador-calorias-f9b00"
+  },
+  "targets": {
+    "contador-calorias-f9b00": {
+      "hosting": {
+        "paola": [
+          "paola-henao-neuro-psicologa"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

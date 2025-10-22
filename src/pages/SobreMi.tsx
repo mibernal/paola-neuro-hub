@@ -9,17 +9,17 @@ const SobreMi = () => {
   const education = [
     {
       title: 'Maestría en Neuropsicología Clínica',
-      institution: 'Universidad Nacional de Colombia',
-      year: '2018',
+      institution: 'XXXXXXXX',
+      year: '2022',
     },
     {
       title: 'Psicología',
-      institution: 'Universidad de los Andes',
-      year: '2015',
+      institution: 'UNAD',
+      year: '2019',
     },
     {
       title: 'Especialización en Neuropsicología Infantil',
-      institution: 'Universidad Javeriana',
+      institution: 'XXXXXX',
       year: '2020',
     },
   ];
@@ -64,7 +64,7 @@ const SobreMi = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                Paola Henao
+                Jessica Paola Henao
               </h1>
               
               <p className="text-xl text-primary font-medium">
@@ -73,7 +73,7 @@ const SobreMi = () => {
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Con más de 10 años de experiencia en el campo de la neuropsicología, mi pasión es 
+                  Con más de 6 años de experiencia en el campo de la neuropsicología, mi pasión es 
                   ayudar a las personas a comprender y potenciar sus capacidades cognitivas y emocionales.
                 </p>
                 <p>

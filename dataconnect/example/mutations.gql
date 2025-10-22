@@ -1,0 +1,100 @@
+﻿# dataconnect/example/mutations.gql
+# Mutations de creación (insert) compatibles con dataconnect/schema/schema.gql
+
+mutation CreateService(
+  $name: String!
+  $description: String!
+  $price: Float
+  $duration: String
+  $imageUrl: String
+) {
+  service_insert(
+    data: {
+      name: $name
+      description: $description
+      price: $price
+      duration: $duration
+      imageUrl: $imageUrl
+    }
+  ) 
+}
+
+mutation CreatePsychologist(
+  $name: String!
+  $professionalLicenseNumber: String!
+  $email: String!
+  $bio: String
+  $profilePictureUrl: String
+  $phoneNumber: String
+  $address: String
+) {
+  psychologist_insert(
+    data: {
+      name: $name
+      professionalLicenseNumber: $professionalLicenseNumber
+      email: $email
+      bio: $bio
+      profilePictureUrl: $profilePictureUrl
+      phoneNumber: $phoneNumber
+      address: $address
+    }
+  )
+}
+
+mutation CreateTestimonial(
+  $clientName: String!
+  $reviewText: String!
+  $date: Date!
+  $rating: Int
+) {
+  testimonial_insert(
+    data: {
+      clientName: $clientName
+      reviewText: $reviewText
+      date: $date
+      rating: $rating
+    }
+  )
+}
+
+mutation CreateBlogPost(
+  $title: String!
+  $content: String!
+  $publishDate: Timestamp!
+  $imageUrl: String
+  $tags: [String]
+) {
+  blogPost_insert(
+    data: {
+      title: $title
+      content: $content
+      publishDate: $publishDate
+      imageUrl: $imageUrl
+      tags: $tags
+    }
+  )
+}
+
+mutation CreateAppointment(
+  $clientName: String!
+  $clientEmail: String!
+  $desiredDateTime: Timestamp!
+  $status: String!
+  $clientPhoneNumber: String
+  $notes: String
+  $serviceRequestedName: String
+) {
+  appointment_insert(
+    data: {
+      clientName: $clientName
+      clientEmail: $clientEmail
+      desiredDateTime: $desiredDateTime
+      status: $status
+      clientPhoneNumber: $clientPhoneNumber
+      notes: $notes
+      # If your schema expects a reference to Service entity rather than a string,
+      # you will need to provide the correct nested object here (adjust later).
+      serviceRequested: { name: $serviceRequestedName }
+    }
+  )
+}

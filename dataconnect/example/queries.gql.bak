@@ -1,0 +1,28 @@
+mutation CreatePsychologist($name: String!, $email: String!, $professionalLicenseNumber: String!) @auth(level: USER) {
+  psychologist_insert(data: {name: $name, email: $email, professionalLicenseNumber: $professionalLicenseNumber})
+}
+
+query ListServices @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  services {
+    id
+    name
+    description
+    duration
+    price
+  }
+}
+
+mutation CreateAppointment($serviceRequestedId: UUID!, $clientName: String!, $clientEmail: String!, $desiredDateTime: Timestamp!, $notes: String!, $status: String!) @auth(level: USER) {
+  appointment_insert(data: {serviceRequestedId: $serviceRequestedId, clientName: $clientName, clientEmail: $clientEmail, desiredDateTime: $desiredDateTime, notes: $notes, status: $status})
+}
+
+query ListBlogPosts(@auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  blogPosts {
+    id
+    title
+    content
+    publishDate
+    imageUrl
+    tags
+  }
+}
