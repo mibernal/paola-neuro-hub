@@ -91,7 +91,7 @@ const Index = () => {
 
             <div className="flex items-center justify-center gap-8 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">10+</div>
+                <div className="text-3xl font-bold text-primary">6+</div>
                 <div className="text-sm text-muted-foreground">Años de experiencia</div>
               </div>
               <div className="w-px h-12 bg-border" />
